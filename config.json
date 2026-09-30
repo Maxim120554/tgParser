@@ -1,0 +1,40 @@
+{
+  "project": {
+    "name": "news_analytics",
+    "log_level": "INFO",
+    "log_dir": "./logs"
+  },
+  "telegram": {
+    "fetch_limit": 50,
+    "proxy": {
+      "type": "http",
+      "host": "127.0.0.1",
+      "port": 2080
+    }
+  },
+  "qdrant": {
+    "host": "192.168.0.100",
+    "http_port": 6333,
+    "grpc_port": 6334,
+    "prefer_grpc": false,
+    "timeout": 30
+  },
+  "collection": {
+    "name": "test1",
+    "vector_size": 2048,
+    "vector_distance": "Cosine",
+    "shard_number": 1,
+    "replication_factor": 1,
+    "on_disk_payload": true,
+    "quantization_enabled": true
+  },
+  "embeddings": {
+    "model_name": "ai-sage/Giga-Embeddings-instruct-3B-0826",
+    "model_path": "D:\\models\\giga\\hub\\models--ai-sage--Giga-Embeddings-instruct-3B-0826\\snapshots\\b71168088212f0a13688514e4fc288a86106c4e4",
+    "device": "cuda",
+    "batch_size": 40
+  },
+  "filter": {
+    "min_text_length": 100
+  }
+}

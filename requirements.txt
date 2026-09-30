@@ -1,0 +1,4 @@
+Telethon==1.45.0
+qdrant-client==1.19.1
+python-socks[asyncio]
+loguru
